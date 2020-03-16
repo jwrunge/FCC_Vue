@@ -1,0 +1,85 @@
+// Simple fade (on image pause control, subpage screen)
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slowfade-enter-active, .slowfade-leave-active {
+  transition: opacity .5s;
+  transition-delay: .5s;
+}
+
+.slowfade-enter, .slowfade-leave-to {
+  opacity: 0;
+}
+
+//For appear/disappear of subpage
+.fade-enter-active .subpage, .fade-leave-active .subpage, .fade-enter-active .modal_inner, .fade-leave-active .modal_inner, .fade-enter-active .nobg_inner, .fade-leave-active .nobg_inner {
+  transition: top .4s ease-in-out;
+  top: 0;
+  opacity: 1;
+}
+
+.fade-enter .subpage, .fade-enter .modal_inner, .fade-enter .nobg_inner {
+  top: 10vh;
+}
+
+.fade-leave-to .subpage, .fade-leave-to .modal_inner, .fade-leave-to .nobg_inner {
+  top: -10vh;
+}
+
+// Fade and slide up transition on captions
+.fadeup-enter-active, .fadeup-leave-active {
+  transition: opacity 1s, bottom 1s ease;
+}
+
+.fadeup-enter, .fadeup-leave-to {
+  opacity: 0;
+  bottom: -5vh;
+}
+
+// Sliding fade on image transitions
+.slidefade-enter-active, .slidefade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.slidefade-enter {
+  opacity: 0;
+}
+
+//Slide up transition for route change
+.slideup-enter-active, .slideup-leave-active {
+  transition: top .4s ease-in-out, opacity .3s;
+  top: 0;
+  opacity: 1;
+}
+
+.slideup-enter {
+  top: 10vh;
+  opacity: 0;
+}
+
+.slideup-leave-to {
+  top: -10vh;
+  opacity: 0;
+}
+
+// Left slide ('we love our church')
+.left-slide-enter-active, .left-slide-leave-active {
+  transition: opacity 1s, left 1s ease;
+  position: absolute;
+  left: 0;
+}
+
+.left-slide-enter { 
+  opacity: 0;
+  left: 20%;
+}
+
+.left-slide-leave-to {
+  opacity: 0;
+  left: -20%;
+}
